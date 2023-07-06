@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>baitap_Js_buoi_15</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- baitap1  -->
+
+    <div class="container">
+        <h1>Bài tập quản lý tuyển sinh</h1>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="diemTieuChuan" aria-describedby="emailHelpId"
+                placeholder="Nhập điểm chuẩn ">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="mon1" aria-describedby="emailHelpId"
+                placeholder="Nhập điểm môn thứ nhất">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="mon2" aria-describedby="emailHelpId"
+                placeholder="Nhập điểm môn thứ hai">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="mon3" aria-describedby="emailHelpId"
+                placeholder="Nhập điểm môn thứ ba">
+        </div>
+        <div class="mp3">
+            <label for="" class="form-label">Chọn khu vực</label>
+            <select name="" id="chonKhuVuc">
+                <option value=""></option>
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+            </select>
+        </div>
+        <div class="mp3">
+            <label for="" class="form-label">Chọn đối tượng</label>
+            <select name="" id="chonDoiTuong">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <button class="btn btn-danger" id="buton" onclick="quanLyTuyenSinh()">Kết quả</button>
+        <div class="bg-danger text-white rounded-5 py-2 ps-4" id="hienThiKetQua">
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+
+    <!-- baitap2 -->
+
+    <div class="container">
+        <h1>Bài tập tính tiền diện</h1>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="nhapHoTen" aria-describedby="emailHelpId"
+                placeholder="Nhập họ tên">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="nhapSoKw" aria-describedby="emailHelpId"
+                placeholder="Nhập số KW điện đã sử dụng">
+        </div>
+        <button class="btn btn-danger" id="tinhTienDien">Tính tiền điện</button>
+        <div class="bg-danger text-white rounded-5 py-2 ps-4" id="hienThiTien">
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+    <!-- baitap3 -->
+
+    <div class="container">
+        <h1>Bài tập tính thuế thu nhập cá nhân</h1>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="nhapVaoTen" aria-describedby="emailHelpId"
+                placeholder="Nhập họ tên">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="thuNhap" aria-describedby="emailHelpId"
+                placeholder="Nhập tổng thu nhập năm">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="soNguoi" aria-describedby="emailHelpId"
+                placeholder="Nhập số người phụ thuộc">
+        </div>
+        <button class="btn btn-danger" id="tinhTienThue">Tính tiền</button>
+        <div class="bg-danger text-white rounded-5 py-2 ps-4" id="hienThiThue">
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+
+    <!-- baitap4 -->
+
+    <div class="container">
+        <h1>Bài tập tính tiền cáp</h1>
+        <div class="mp3 ">
+            <label for="" class="form-label"></label>
+            <select name="" id="chonKhach" onchange="doanhNghiep()">
+                <option value="">Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà dân</option>
+                <option value="doanhNghiep">Doanh nghiệp</option>
+            </select>
+        </div>
+        <br>
+        <div class=" chonKhachHang mb-3 ">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control " name="" id="soKetNoi" aria-describedby="emailHelpId"
+                placeholder="Nhập số kết nối">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="maKH" aria-describedby="emailHelpId"
+                placeholder="Nhập mã khách hàng">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="text" class="form-control" name="" id="soKenh" aria-describedby="emailHelpId"
+                placeholder="Nhập số kênh">
+        </div>
+        <br>
+        <button class="btn btn-danger" id="tinhTienCap" onclick="tinhTienCap()">Tính tiền cáp</button>
+        <br>
+        <div class="bg-danger text-white rounded-5 py-2 ps-4" id="hienThiTienCap">
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
+        <script src="./index.js"></script>
+</body>
+
+</html>
